@@ -1,0 +1,7 @@
+---
+- name: apply playbooks
+  hosts: centos-hosts
+  become: true
+  remote_user: centos
+  roles:
+    - role: nginxinc.nginx

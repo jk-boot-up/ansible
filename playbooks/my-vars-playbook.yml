@@ -1,0 +1,17 @@
+---
+- name: apply playbooks
+  hosts: all
+  become: true
+  - debug: var=ansible_facts
+
+
+  tasks:
+  - name: Print ansible_distribution
+    debug:
+      msg: "The operating system is {{ ansible_distribution }}"
+
+  - name: Print ansible_distribution_major_version
+    debug:
+      msg: "The ansible_distribution_major_version is {{ ansible_distribution_major_version }}"
+
+

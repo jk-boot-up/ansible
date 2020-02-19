@@ -1,0 +1,8 @@
+---
+- name: apply playbooks
+  hosts: centos0
+  become: true
+  remote_user: centos
+
+  tasks:
+    - debug: var=ansible_facts
