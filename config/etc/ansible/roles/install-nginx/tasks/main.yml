@@ -1,0 +1,5 @@
+---
+# tasks file for install-nginx
+- name: install nginx
+  roles:
+    - role: nginx

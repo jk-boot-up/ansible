@@ -2,6 +2,7 @@
 - name: apply playbooks
   hosts: centos-hosts
   become: true
-  remote_user: centos
+  vars:
+    nginx_version: "-1.17.4-1.el{{ ansible_distribution_major_version }}.ngx"
   roles:
-    - role: nginxinc.nginx
+    - role: install-nginx
